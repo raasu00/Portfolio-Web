@@ -1,0 +1,64 @@
+<!-- Modal Tambah/Edit Proyek -->
+<div id="modal-proyek" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title" id="modal-title">Tambah Proyek Baru</h2>
+            <button class="close-modal">&times;</button>
+        </div>
+        
+        <form id="form-proyek">
+            <input type="hidden" id="proyek-id">
+            
+            <div style="padding: 0 24px;">
+                <div class="form-group">
+                    <label for="nama-proyek">Nama Proyek *</label>
+                    <input type="text" id="nama-proyek" placeholder="Contoh: Sistem Manajemen Produk" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi Proyek *</label>
+                    <textarea id="deskripsi" placeholder="Jelaskan tentang proyek ini, fitur utama, dan tujuan pembuatan..." required></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="url-proyek">URL Proyek *</label>
+                        <input type="url" id="url-proyek" placeholder="https://example.vercel.app" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="kategori">Kategori *</label>
+                        <select id="kategori" required>
+                            <option value="">Pilih kategori</option>
+                            <option value="static">Website Statis</option>
+                            <option value="crud">Aplikasi CRUD</option>
+                            <option value="utility">Utility Apps</option>
+                            <option value="realtime">Real-Time Apps</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="teknologi">Teknologi yang Digunakan</label>
+                    <input type="text" id="teknologi" placeholder="HTML, CSS, JS, React, Tailwind, dll (pisahkan dengan koma)">
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Teknologi akan ditampilkan sebagai tag di kartu proyek</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tanggal">Tanggal Pembuatan</label>
+                    <input type="date" id="tanggal">
+                </div>
+                
+                <div class="alert alert-success" id="alert-form" style="display: none;"></div>
+            </div>
+            
+            <div class="form-footer">
+                <button type="button" class="btn btn-outline close-modal">Batal</button>
+                <button type="submit" class="btn btn-primary" id="btn-simpan">Simpan Proyek</button>
+            </div>
+        </form>
+    </div>
+</div>

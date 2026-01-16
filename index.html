@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Portofolio - Progres Pengembangan Web</title>
+    <!-- PROJECT: Sistem Manajemen Portofolio Proyek Web v1.0 -->
+    <!-- Developer: Muhammad Salman Hakim -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <div class="logo-content">
+                        <h1>Mini Portofolio Web</h1>
+                        <span>Progres Pengembangan 3 Bulan Terakhir</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="btn-tambah-proyek">
+                    <i class="fas fa-plus"></i> Tambah Proyek
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Intro Section -->
+        <section class="intro-section">
+            <h2><i class="fas fa-rocket"></i> Perjalanan Pengembangan Web</h2>
+            <p>
+                Selama 3 bulan terakhir, saya telah membangun berbagai jenis website yang menunjukkan progres 
+                kemampuan pengembangan web, dari website statis sederhana hingga aplikasi web dinamis dengan 
+                fitur real-time. Setiap proyek mewakili peningkatan kompleksitas dan penguasaan teknologi yang berbeda.
+            </p>
+            
+            <div class="timeline-progress">
+                <div class="progress-item">
+                    <i class="fas fa-globe"></i>
+                    <h4>Website Statis</h4>
+                    <p>Informasi & Promosi</p>
+                </div>
+                <div class="progress-item">
+                    <i class="fas fa-database"></i>
+                    <h4>Aplikasi CRUD</h4>
+                    <p>Manajemen Data Interaktif</p>
+                </div>
+                <div class="progress-item">
+                    <i class="fas fa-tools"></i>
+                    <h4>Utility Apps</h4>
+                    <p>Tools & Integrasi API</p>
+                </div>
+                <div class="progress-item">
+                    <i class="fas fa-comments"></i>
+                    <h4>Real-Time Apps</h4>
+                    <p>Komunikasi Instan</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">
+                    <i class="fas fa-project-diagram"></i> Koleksi Proyek Web
+                </h2>
+                
+                <div class="action-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Cari berdasarkan nama atau teknologi...">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">Semua Proyek</button>
+                <button class="filter-btn" data-category="static">Website Statis</button>
+                <button class="filter-btn" data-category="crud">Aplikasi CRUD</button>
+                <button class="filter-btn" data-category="utility">Utility Apps</button>
+                <button class="filter-btn" data-category="realtime">Real-Time Apps</button>
+            </div>
+            
+            <!-- Project Grid -->
+            <div class="project-grid" id="project-grid">
+                <!-- Data proyek akan dimuat di sini -->
+            </div>
+            
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-state">
+                <i class="fas fa-folder-open"></i>
+                <h3>Belum ada proyek</h3>
+                <p>Tambahkan proyek pertama Anda untuk memulai dokumentasi portofolio</p>
+                <button class="btn btn-primary" id="btn-tambah-empty">
+                    <i class="fas fa-plus"></i> Tambah Proyek Pertama
+                </button>
+            </div>
+            
+            <div id="no-search-results" class="empty-state" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>Proyek tidak ditemukan</h3>
+                <p>Tidak ada proyek yang cocok dengan pencarian Anda</p>
+                <button class="btn btn-outline" id="btn-clear-search">
+                    <i class="fas fa-times"></i> Hapus Pencarian
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Container (akan diisi dinamis) -->
+    <div id="modal-container"></div>
+
+    <div class="footer">
+        <div class="container">
+            <p>Mini Portofolio Web &copy; 2024 | Dokumentasi Progres Pengembangan 3 Bulan</p>
+            <p style="font-size: 0.8rem; margin-top: 8px; color: var(--gray);">
+                Dibangun dengan HTML, CSS, dan JavaScript | CRUD untuk manajemen proyek
+            </p>
+        </div>
+    </div>
+
+    <script src="js/app.js" defer></script>
+    <script>
+        // Inisialisasi aplikasi
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load modal form dari file terpisah
+            fetch('tambah-proyek.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('modal-container').innerHTML = html;
+                    // Inisialisasi event listeners setelah modal dimuat
+                    initModalEvents();
+                })
+                .catch(error => console.error('Error loading modal:', error));
+            
+            // Inisialisasi aplikasi utama
+            if (typeof initApp === 'function') {
+                initApp();
+            }
+        });
+    </script>
+</body>
+</html>
