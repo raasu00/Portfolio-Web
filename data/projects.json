@@ -1,1 +1,42 @@
-
+[
+    {
+        "id": "1",
+        "nama": "BibitCabai - Company Profile",
+        "deskripsi": "Website statis untuk perusahaan perbibitan cabai dengan informasi produk, varietas, dan kontak. Menunjukkan kemampuan dasar HTML/CSS/JS.",
+        "url": "https://bibit-cabai.vercel.app",
+        "kategori": "static",
+        "teknologi": "HTML, CSS, JavaScript",
+        "tanggal": "2024-01-15",
+        "gambar": "https://images.unsplash.com/photo-1589606663923-283bbd309229?w=400&h=200&fit=crop"
+    },
+    {
+        "id": "2",
+        "nama": "Manajemen Harga Produk",
+        "deskripsi": "Aplikasi web CRUD untuk mengelola daftar produk, harga, dan kompetitor. Menunjukkan kemampuan React, state management, dan operasi data.",
+        "url": "https://tabel-produk.vercel.app",
+        "kategori": "crud",
+        "teknologi": "React, JavaScript, LocalStorage",
+        "tanggal": "2024-02-10",
+        "gambar": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop"
+    },
+    {
+        "id": "3",
+        "nama": "Video Downloader Utility",
+        "deskripsi": "Aplikasi utilitas untuk mengunduh video dari berbagai platform. Menunjukkan integrasi dengan API eksternal dan pemrosesan data.",
+        "url": "https://vidytk.vercel.app",
+        "kategori": "utility",
+        "teknologi": "React, API Integration, JavaScript",
+        "tanggal": "2024-02-25",
+        "gambar": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop"
+    },
+    {
+        "id": "4",
+        "nama": "Simple Chat App",
+        "deskripsi": "Aplikasi chat real-time sederhana. Menunjukkan kemampuan WebSockets dan manajemen state real-time.",
+        "url": "https://chatting-lite.vercel.app",
+        "kategori": "realtime",
+        "teknologi": "WebSocket, Real-Time, JavaScript",
+        "tanggal": "2024-03-05",
+        "gambar": "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=400&h=200&fit=crop"
+    }
+]
